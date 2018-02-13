@@ -224,7 +224,7 @@ RCT_EXPORT_METHOD(setAlarm:(NSString *)triggerTime
             
             UNNotificationAction *action = [UNNotificationAction
                                             actionWithIdentifier:@"clear.repeat.action"
-                                            title:@"关闭"
+                                            title:@""
                                             options:UNNotificationActionOptionForeground];
             UNNotificationCategory *category = [UNNotificationCategory
                                                 //categoryWithIdentifier:@"RNAlarmCategory"

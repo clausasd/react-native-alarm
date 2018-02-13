@@ -53,33 +53,13 @@ public class RNALarmCeiver extends BroadcastReceiver {
                 uri = UriUtil.parseUriOrNull(musicUri);
             }
 
-
-            //Toast.makeText(context,title,Toast.LENGTH_SHORT).show();
-
-//        AlertDialog.Builder normalDialog =
-//                new AlertDialog.Builder(context);
-//        normalDialog.setTitle(title);
-//        normalDialog.setNegativeButton("关闭",
-//                new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        dialog.dismiss();
-//                        player.stop();
-//                    }
-//                });
-//
-//        AlertDialog dialog = normalDialog.create();
-//        dialog.getWindow()
-//                .setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
-//        dialog.show();
-
             PendingIntent pi = PendingIntent.getActivity(context, 100, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 
             Notification.Builder notificationBuilder = new Notification.Builder(context)
-                    .setSmallIcon(android.R.drawable.sym_def_app_icon)//设置小图标
+                    .setSmallIcon(android.R.drawable.sym_def_app_icon)
                     .setVibrate(new long[]{0,6000})
                     .setContentTitle(title)
-                    .setContentText("闹钟");
+                    .setContentText("");
 
 
             Notification notification = notificationBuilder.build();
